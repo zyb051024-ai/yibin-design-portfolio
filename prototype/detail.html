@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="w-full h-full overflow-hidden" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>观影灵感 · 电影详情</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+</head>
+<body class="w-full h-full m-0 overflow-hidden flex items-center justify-center bg-[#E8ECF4]">
+<div class="relative w-full h-full max-w-[393px] max-h-[852px] bg-[#F6F8FC] flex flex-col overflow-hidden" id="frame">
+<!-- iOS 状态栏（叠在海报深色区上） -->
+<div class="shrink-0 h-11 px-7 flex items-center justify-between bg-[#141824] text-white">
+<span class="text-[15px] font-semibold tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5">
+<iconify-icon class="text-[16px]" icon="lucide:signal"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:wifi"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:battery-full"></iconify-icon>
+</div>
+</div>
+<!-- 主滚动区 -->
+<main class="flex-1 min-h-0 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<!-- 大海报 -->
+<div class="relative h-[240px] bg-gradient-to-br from-[#141824] via-[#25304C] to-[#5B8FF9]">
+<img alt="Moon Man poster with astronaut in white suit on the moon" class="absolute inset-0 w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/ade201ac497642418fc47ae8d6759cae.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-b from-[#141824]/80 via-transparent to-[#141824]/70"></div>
+<div class="absolute inset-x-4 top-3 flex items-center">
+<a class="w-9 h-9 rounded-full bg-black/35 backdrop-blur flex items-center justify-center text-white active:bg-black/50" href="results.html">
+<iconify-icon class="text-[19px]" icon="lucide:arrow-left"></iconify-icon>
+</a>
+<div class="ml-auto flex items-center gap-2">
+<button class="w-9 h-9 rounded-full bg-black/35 backdrop-blur flex items-center justify-center text-white active:bg-black/50" onclick="toast('已复制分享链接')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:share-2"></iconify-icon>
+</button>
+<button class="w-9 h-9 rounded-full bg-black/35 backdrop-blur flex items-center justify-center text-white active:bg-black/50" onclick="toast('正在为你播放预告片...')" type="button">
+<iconify-icon class="text-[18px] ml-0.5" icon="lucide:play"></iconify-icon>
+</button>
+</div>
+</div>
+<div class="absolute left-4 bottom-6 flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur text-white text-[10px]">豆瓣 7.2</span>
+<span class="px-2 py-0.5 rounded-full bg-white/20 backdrop-blur text-white text-[10px]">科幻喜剧</span>
+</div>
+</div>
+<!-- 内容卡片 -->
+<div class="relative -mt-4 rounded-t-[24px] bg-[#F6F8FC] px-4 pt-5 pb-5">
+<!-- 片名与评分 -->
+<div class="bg-white rounded-[18px] p-4">
+<div class="flex items-start gap-3">
+<div class="flex-1 min-w-0">
+<h1 class="text-[22px] font-bold text-[#333333] leading-tight">独行月球</h1>
+<div class="mt-2 flex items-center gap-2">
+<span class="text-[20px] font-bold text-[#5B8FF9]">7.2</span>
+<span class="text-[11px] text-[#999999]">豆瓣评分 · 3.1 万人评分</span>
+</div>
+</div>
+<span class="shrink-0 w-11 h-11 rounded-[14px] bg-[#F0F4FF] text-[#5B8FF9] flex items-center justify-center">
+<iconify-icon class="text-[20px]" icon="lucide:film"></iconify-icon>
+</span>
+</div>
+<div class="mt-3 flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-full bg-[#F0F4FF] text-[#5B8FF9] text-[11px]">喜剧</span>
+<span class="px-2.5 py-1 rounded-full bg-[#F0F4FF] text-[#5B8FF9] text-[11px]">科幻</span>
+<span class="px-2.5 py-1 rounded-full bg-[#F0F4FF] text-[#5B8FF9] text-[11px]">冒险</span>
+</div>
+<p class="mt-3 text-[12px] text-[#999999]">1小时56分钟 · 2022 · 中国大陆</p>
+</div>
+<!-- 剧情简介 -->
+<div class="mt-3 bg-white rounded-[18px] p-4">
+<h2 class="text-[15px] font-bold text-[#333333]">剧情简介</h2>
+<p class="mt-2 text-[13px] text-[#666666] leading-relaxed">
+              人类为抵御小行星撞击启动“月盾计划”，维修工独孤月因为一次意外被遗落在月球。以为自己是宇宙最后一个人的他，在月球上开始了荒诞又孤独的求生日常，却没想到自己的每一次出糗，都被地球上的幸存者当成直播看着。当孤独被千万人注视，一个人的坚持也成了一群人的希望。
+            </p>
+<button class="mt-2 text-[12px] text-[#5B8FF9] font-medium" onclick="toast('已展开完整简介')" type="button">展开全部</button>
+</div>
+<!-- 演职人员 -->
+<div class="mt-3 bg-white rounded-[18px] p-4">
+<h2 class="text-[15px] font-bold text-[#333333]">演职人员</h2>
+<div class="mt-3 flex gap-4 overflow-x-auto pb-1 [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="w-[64px] shrink-0 flex flex-col items-center">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-gradient-to-br from-[#8FA8D8] to-[#5B8FF9]">
+<img alt="Portrait of actor Shen Teng" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/671c7938a4784a11b557ef58ece19844.jpg"/>
+</div>
+<p class="mt-2 text-[12px] font-medium text-[#333333]">沈腾</p>
+<p class="text-[10px] text-[#999999]">饰 独孤月</p>
+</div>
+<div class="w-[64px] shrink-0 flex flex-col items-center">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-gradient-to-br from-[#E3A0B8] to-[#C05A86]">
+<img alt="Portrait of actress Ma Li" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/8476a346c53247f0863f585d5667e338.jpg"/>
+</div>
+<p class="mt-2 text-[12px] font-medium text-[#333333]">马丽</p>
+<p class="text-[10px] text-[#999999]">饰 马蓝星</p>
+</div>
+<div class="w-[64px] shrink-0 flex flex-col items-center">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-gradient-to-br from-[#9FD6C0] to-[#3E9C7A]">
+<img alt="Portrait of actor Chang Yuan" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/b14c79d68b8c4d41a9fc1170f45ad8f0.jpg"/>
+</div>
+<p class="mt-2 text-[12px] font-medium text-[#333333]">常远</p>
+<p class="text-[10px] text-[#999999]">饰 朱科</p>
+</div>
+<div class="w-[64px] shrink-0 flex flex-col items-center">
+<div class="w-14 h-14 rounded-full bg-[#F0F4FF] text-[#5B8FF9] flex items-center justify-center">
+<iconify-icon class="text-[20px]" icon="lucide:users"></iconify-icon>
+</div>
+<p class="mt-2 text-[12px] font-medium text-[#333333]">全部</p>
+<p class="text-[10px] text-[#999999]">36 位主创</p>
+</div>
+</div>
+</div>
+<!-- Tab -->
+<div class="mt-3 bg-white rounded-[18px] p-4">
+<div class="flex items-center gap-5 border-b border-[#F2F4F9] pb-2.5">
+<button class="text-[14px] font-semibold text-[#333333] relative" id="tab-0" onclick="switchTab(0)" type="button">
+                影评
+                <span class="block absolute -bottom-[11px] left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]"></span>
+</button>
+<button class="text-[14px] text-[#999999] relative" id="tab-1" onclick="switchTab(1)" type="button">
+                相似推荐
+                <span class="hidden absolute -bottom-[11px] left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]"></span>
+</button>
+<button class="text-[14px] text-[#999999] relative" id="tab-2" onclick="switchTab(2)" type="button">
+                查看平台
+                <span class="hidden absolute -bottom-[11px] left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]"></span>
+</button>
+</div>
+<!-- 影评 -->
+<div class="mt-3 space-y-4" id="panel-0">
+<div class="flex gap-3">
+<div class="w-9 h-9 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#8FA8D8] to-[#5B8FF9]">
+<img alt="Avatar of reviewer movie fan" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/e1b3829ebc5f44bba256e1e00e8e8ca6.jpg"/>
+</div>
+<div class="min-w-0">
+<p class="text-[13px] font-semibold text-[#333333]">电影爱好者</p>
+<div class="mt-0.5 flex items-center gap-0.5 text-[#FF9F1C]">
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px] text-[#E3E7F0]" icon="lucide:star"></iconify-icon>
+<span class="ml-1 text-[11px] text-[#999999]">4.0 分</span>
+</div>
+<p class="mt-1.5 text-[13px] text-[#666666] leading-relaxed">
+                    很搞笑，也很温暖。沈腾和马丽的组合依然稳，科幻外壳下那种“一个人也要把日子过下去”的孤独感被处理得恰到好处。
+                  </p>
+<p class="mt-1.5 text-[11px] text-[#999999]">12 人赞同 · 2 天前</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-9 h-9 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#F2C14E] to-[#D96B2B]">
+<img alt="Avatar of reviewer moon surface" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/8ed32deef96b4c70b71cd33fd8df7986.jpg"/>
+</div>
+<div class="min-w-0">
+<p class="text-[13px] font-semibold text-[#333333]">月球表面</p>
+<div class="mt-0.5 flex items-center gap-0.5 text-[#FF9F1C]">
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<span class="ml-1 text-[11px] text-[#999999]">5.0 分</span>
+</div>
+<p class="mt-1.5 text-[13px] text-[#666666] leading-relaxed">
+                    笑着笑着就哭了。独孤月每一次“再试一次”，都特别戳人。
+                  </p>
+<p class="mt-1.5 text-[11px] text-[#999999]">8 人赞同 · 5 天前</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-9 h-9 shrink-0 rounded-full overflow-hidden bg-gradient-to-br from-[#9FD6C0] to-[#3E9C7A]">
+<img alt="Avatar of reviewer weekend watcher" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/bd7499a2ef874780982c9bc916a5f32b.jpg"/>
+</div>
+<div class="min-w-0">
+<p class="text-[13px] font-semibold text-[#333333]">周末观影</p>
+<div class="mt-0.5 flex items-center gap-0.5 text-[#FF9F1C]">
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px] text-[#E3E7F0]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[12px] text-[#E3E7F0]" icon="lucide:star"></iconify-icon>
+<span class="ml-1 text-[11px] text-[#999999]">3.0 分</span>
+</div>
+<p class="mt-1.5 text-[13px] text-[#666666] leading-relaxed">
+                    前半段笑点密集，后半段稍显冗长，但作为合家欢整体值得一看。
+                  </p>
+<p class="mt-1.5 text-[11px] text-[#999999]">3 人赞同 · 1 周前</p>
+</div>
+</div>
+</div>
+<!-- 相似推荐 -->
+<div class="hidden mt-3 space-y-3" id="panel-1">
+<a class="flex items-center gap-3" href="detail.html">
+<div class="w-[52px] h-[70px] shrink-0 rounded-[10px] overflow-hidden bg-gradient-to-br from-[#24304C] to-[#5B8FF9]">
+<img alt="The Wandering Earth 2 poster with planetary engines" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/f0e18c48a7c344d4bed4f81edf0ff7d9.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-[14px] font-semibold text-[#333333]">流浪地球2</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">科幻 / 冒险 · 2小时53分钟</p>
+<p class="mt-1 text-[12px] font-bold text-[#FF9F1C]">8.3</p>
+</div>
+<iconify-icon class="text-[18px] text-[#C8CDD8]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<a class="flex items-center gap-3" href="detail.html">
+<div class="w-[52px] h-[70px] shrink-0 rounded-[10px] overflow-hidden bg-gradient-to-br from-[#F2C14E] to-[#D96B2B]">
+<img alt="Goodbye Mr. Loser poster in warm retro tone" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/6eece15d37604c279ae9ea4a2fe22536.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-[14px] font-semibold text-[#333333]">夏洛特烦恼</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">喜剧 / 爱情 · 1小时52分钟</p>
+<p class="mt-1 text-[12px] font-bold text-[#FF9F1C]">7.9</p>
+</div>
+<iconify-icon class="text-[18px] text-[#C8CDD8]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<a class="flex items-center gap-3" href="detail.html">
+<div class="w-[52px] h-[70px] shrink-0 rounded-[10px] overflow-hidden bg-gradient-to-br from-[#3FB6E0] to-[#2C6BD1]">
+<img alt="Zootopia poster with animal city skyline" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/ae28be940b2745bca1176ff851ffbdcf.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-[14px] font-semibold text-[#333333]">疯狂动物城</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">喜剧 / 动画 · 1小时48分钟</p>
+<p class="mt-1 text-[12px] font-bold text-[#FF9F1C]">9.2</p>
+</div>
+<iconify-icon class="text-[18px] text-[#C8CDD8]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+</div>
+<!-- 查看平台 -->
+<div class="hidden mt-3 space-y-2" id="panel-2">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-[14px] bg-[#F7F9FD]">
+<span class="w-8 h-8 rounded-[10px] bg-[#F0F4FF] text-[#5B8FF9] flex items-center justify-center">
+<iconify-icon class="text-[16px]" icon="lucide:monitor-play"></iconify-icon>
+</span>
+<div class="flex-1">
+<p class="text-[13px] font-medium text-[#333333]">腾讯视频</p>
+<p class="text-[11px] text-[#999999]">VIP 免费观看</p>
+</div>
+<button class="px-3 h-7 rounded-full bg-[#5B8FF9] text-white text-[12px]" onclick="toast('正在跳转腾讯视频...')" type="button">播放</button>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-[14px] bg-[#F7F9FD]">
+<span class="w-8 h-8 rounded-[10px] bg-[#EEFBF4] text-[#22C55E] flex items-center justify-center">
+<iconify-icon class="text-[16px]" icon="lucide:monitor-play"></iconify-icon>
+</span>
+<div class="flex-1">
+<p class="text-[13px] font-medium text-[#333333]">爱奇艺</p>
+<p class="text-[11px] text-[#999999]">会员 6 元起</p>
+</div>
+<button class="px-3 h-7 rounded-full bg-[#5B8FF9] text-white text-[12px]" onclick="toast('正在跳转爱奇艺...')" type="button">播放</button>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-[14px] bg-[#F7F9FD]">
+<span class="w-8 h-8 rounded-[10px] bg-[#FFF4ED] text-[#FF7A45] flex items-center justify-center">
+<iconify-icon class="text-[16px]" icon="lucide:monitor-play"></iconify-icon>
+</span>
+<div class="flex-1">
+<p class="text-[13px] font-medium text-[#333333]">优酷视频</p>
+<p class="text-[11px] text-[#999999]">限时免费</p>
+</div>
+<button class="px-3 h-7 rounded-full bg-[#5B8FF9] text-white text-[12px]" onclick="toast('正在跳转优酷视频...')" type="button">播放</button>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-[14px] bg-[#F7F9FD]">
+<span class="w-8 h-8 rounded-[10px] bg-[#F2EEFF] text-[#7C5CFC] flex items-center justify-center">
+<iconify-icon class="text-[16px]" icon="lucide:monitor-play"></iconify-icon>
+</span>
+<div class="flex-1">
+<p class="text-[13px] font-medium text-[#333333]">芒果TV</p>
+<p class="text-[11px] text-[#999999]">会员专享</p>
+</div>
+<button class="px-3 h-7 rounded-full bg-[#5B8FF9] text-white text-[12px]" onclick="toast('正在跳转芒果TV...')" type="button">播放</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- 底部操作栏 -->
+<div class="shrink-0 bg-white border-t border-[#EDF0F7] px-4 pt-3 pb-2 flex items-center gap-2">
+<button class="w-[64px] h-11 rounded-[14px] flex flex-col items-center justify-center text-[#999999] active:bg-[#F7F9FD]" id="btn-want" onclick="mark('want')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:bookmark"></iconify-icon>
+<span class="text-[10px] mt-0.5">想看</span>
+</button>
+<button class="w-[64px] h-11 rounded-[14px] flex flex-col items-center justify-center text-[#999999] active:bg-[#F7F9FD]" id="btn-seen" onclick="mark('seen')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:check-check"></iconify-icon>
+<span class="text-[10px] mt-0.5">已看</span>
+</button>
+<button class="flex-1 h-11 rounded-full bg-[#5B8FF9] text-white text-[15px] font-semibold flex items-center justify-center gap-2 shadow-[0_8px_18px_-8px_rgba(91,143,249,0.9)] active:bg-[#4F81E8]" onclick="toast('正在为你播放《独行月球》...')" type="button">
+<iconify-icon class="text-[17px]" icon="lucide:play"></iconify-icon>
+          立即观看
+        </button>
+</div>
+<!-- 底部导航 -->
+<nav class="shrink-0 bg-white border-t border-[#EDF0F7] px-1 pt-2 pb-5 flex items-start justify-around">
+<a class="flex-1 flex flex-col items-center gap-1" href="home.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:home"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">首页</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="discover.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:compass"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">发现</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="inspiration.html">
+<span class="w-9 h-9 rounded-full bg-[#F0F4FF] flex items-center justify-center text-[#5B8FF9]">
+<iconify-icon class="text-[20px]" icon="lucide:sparkles"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#5B8FF9]">灵感</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="playlist.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:bookmark"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">片单</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="profile.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:user"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">我的</span>
+</a>
+</nav>
+<!-- 轻提示 -->
+<div class="hidden absolute left-1/2 -translate-x-1/2 bottom-40 z-50 px-4 py-2 rounded-full bg-[#333333]/90 text-white text-[13px] whitespace-nowrap" id="toast"></div>
+</div>
+<script>
+      var TAB_ON = 'text-[14px] font-semibold text-[#333333] relative';
+      var TAB_OFF = 'text-[14px] text-[#999999] relative';
+      var MARK_ON = 'w-[64px] h-11 rounded-[14px] flex flex-col items-center justify-center text-[#5B8FF9] active:bg-[#F7F9FD]';
+      var MARK_OFF = 'w-[64px] h-11 rounded-[14px] flex flex-col items-center justify-center text-[#999999] active:bg-[#F7F9FD]';
+
+      function switchTab(index) {
+        for (var i = 0; i < 3; i++) {
+          var tab = document.getElementById('tab-' + i);
+          var panel = document.getElementById('panel-' + i);
+          var bar = tab.querySelector('span');
+          if (i === index) {
+            tab.className = TAB_ON;
+            bar.className = 'block absolute -bottom-[11px] left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]';
+            panel.classList.remove('hidden');
+          } else {
+            tab.className = TAB_OFF;
+            bar.className = 'hidden absolute -bottom-[11px] left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]';
+            panel.classList.add('hidden');
+          }
+        }
+      }
+
+      function mark(type) {
+        var want = document.getElementById('btn-want');
+        var seen = document.getElementById('btn-seen');
+        var wantOn = want.className.indexOf('text-[#5B8FF9]') > -1;
+        var seenOn = seen.className.indexOf('text-[#5B8FF9]') > -1;
+        if (type === 'want') {
+          want.className = wantOn ? MARK_OFF : MARK_ON;
+          if (!wantOn) {
+            seen.className = MARK_OFF;
+            toast('已加入我的片单 · 待看');
+          } else {
+            toast('已从待看移除');
+          }
+        } else {
+          seen.className = seenOn ? MARK_OFF : MARK_ON;
+          if (!seenOn) {
+            want.className = MARK_OFF;
+            toast('已标记为看过');
+          } else {
+            toast('已取消看过');
+          }
+        }
+      }
+
+      function toast(msg) {
+        var el = document.getElementById('toast');
+        el.textContent = msg;
+        el.classList.remove('hidden');
+        clearTimeout(window.__toastTimer);
+        window.__toastTimer = setTimeout(function () {
+          el.classList.add('hidden');
+        }, 1600);
+      }
+    </script>
+</body>
+</html>

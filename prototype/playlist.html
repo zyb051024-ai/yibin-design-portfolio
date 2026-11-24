@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="w-full h-full overflow-hidden" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>观影灵感 · 我的片单</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+</head>
+<body class="w-full h-full m-0 overflow-hidden flex items-center justify-center bg-[#E8ECF4]">
+<div class="relative w-full h-full max-w-[393px] max-h-[852px] bg-[#F6F8FC] flex flex-col overflow-hidden" id="frame">
+<!-- iOS 状态栏 -->
+<div class="shrink-0 h-11 px-7 flex items-center justify-between bg-white text-[#333333]">
+<span class="text-[15px] font-semibold tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5">
+<iconify-icon class="text-[16px]" icon="lucide:signal"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:wifi"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:battery-full"></iconify-icon>
+</div>
+</div>
+<!-- 顶部标题 -->
+<header class="shrink-0 bg-white px-4 pb-3 flex items-center">
+<h1 class="text-[20px] font-bold text-[#333333]">我的片单</h1>
+<button class="ml-auto h-9 px-3.5 rounded-full bg-[#F0F4FF] text-[#5B8FF9] text-[13px] font-medium flex items-center gap-1 active:bg-[#E4EBFE]" onclick="openSheet('sheet-create')" type="button">
+<iconify-icon class="text-[15px]" icon="lucide:plus"></iconify-icon>
+          创建片单
+        </button>
+</header>
+<!-- Tab -->
+<div class="shrink-0 bg-white px-4 flex items-center gap-6 border-b border-[#F2F4F9]">
+<button class="relative pb-2.5 text-[14px] font-semibold text-[#333333]" onclick="switchList(0)" type="button">
+          收藏
+          <span class="block absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]"></span>
+</button>
+<button class="relative pb-2.5 text-[14px] text-[#999999]" onclick="switchList(1)" type="button">
+          待看
+          <span class="hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]"></span>
+</button>
+<button class="relative pb-2.5 text-[14px] text-[#999999]" onclick="switchList(2)" type="button">
+          已看
+          <span class="hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]"></span>
+</button>
+</div>
+<!-- 主滚动区 -->
+<main class="flex-1 min-h-0 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="px-4 py-4">
+<!-- 收藏面板 -->
+<div class="space-y-3" id="panel-0">
+<p class="text-[12px] text-[#999999]">4 个片单 · 共 55 部电影</p>
+<div class="flex items-center gap-3 bg-white rounded-[16px] p-3">
+<div class="w-[62px] h-[62px] shrink-0 rounded-[14px] overflow-hidden bg-gradient-to-br from-[#9FD6C0] to-[#3E9C7A]">
+<img alt="Cover of healing movies collection with green meadow" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/d4b022eaf2fd411c8f613fac6b6accca.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">治愈系电影</h3>
+<p class="mt-1 text-[12px] text-[#999999]">12 部 · 公开</p>
+</div>
+<button class="w-8 h-8 flex items-center justify-center text-[#999999] active:text-[#5B8FF9]" onclick="openSheet('sheet-more','治愈系电影')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:more-horizontal"></iconify-icon>
+</button>
+</div>
+<div class="flex items-center gap-3 bg-white rounded-[16px] p-3">
+<div class="w-[62px] h-[62px] shrink-0 rounded-[14px] overflow-hidden bg-gradient-to-br from-[#4B5570] to-[#1C2233]">
+<img alt="Cover of suspense movies collection in dark blue tone" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/6b767a3fe9834e11a8892fbb49581b28.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">悬疑烧脑</h3>
+<p class="mt-1 text-[12px] text-[#999999]">8 部 · 公开</p>
+</div>
+<button class="w-8 h-8 flex items-center justify-center text-[#999999] active:text-[#5B8FF9]" onclick="openSheet('sheet-more','悬疑烧脑')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:more-horizontal"></iconify-icon>
+</button>
+</div>
+<div class="flex items-center gap-3 bg-white rounded-[16px] p-3">
+<div class="w-[62px] h-[62px] shrink-0 rounded-[14px] overflow-hidden bg-gradient-to-br from-[#F2C14E] to-[#D96B2B]">
+<img alt="Cover of watch with friends collection in warm orange tone" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/90ef1fcc31c5468d9d01b8a0ea0e6d3c.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">和朋友一起看</h3>
+<p class="mt-1 text-[12px] text-[#999999]">15 部 · 公开</p>
+</div>
+<button class="w-8 h-8 flex items-center justify-center text-[#999999] active:text-[#5B8FF9]" onclick="openSheet('sheet-more','和朋友一起看')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:more-horizontal"></iconify-icon>
+</button>
+</div>
+<div class="flex items-center gap-3 bg-white rounded-[16px] p-3">
+<div class="w-[62px] h-[62px] shrink-0 rounded-[14px] overflow-hidden bg-gradient-to-br from-[#8FA8D8] to-[#3D5A9E]">
+<img alt="Cover of classics collection with vintage cinema seats" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/c83247e77a6e41da93d58bef935ec0f6.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">经典必看</h3>
+<p class="mt-1 text-[12px] text-[#999999]">20 部 · 公开</p>
+</div>
+<button class="w-8 h-8 flex items-center justify-center text-[#999999] active:text-[#5B8FF9]" onclick="openSheet('sheet-more','经典必看')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:more-horizontal"></iconify-icon>
+</button>
+</div>
+</div>
+<!-- 待看面板 -->
+<div class="hidden space-y-3" id="panel-1">
+<p class="text-[12px] text-[#999999]">待看 12 部 · 按添加时间排序</p>
+<div class="flex gap-3 bg-white rounded-[16px] p-3">
+<a class="w-[62px] h-[84px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#2A3350] to-[#5B8FF9]" href="detail.html">
+<img alt="Moon Man poster with lone astronaut" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/21a6aaf418524878b5dfa4a00ff07d7b.jpg"/>
+</a>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">独行月球</h3>
+<p class="mt-1 text-[11px] text-[#999999]">喜剧 / 科幻 · 1小时56分钟</p>
+<button class="mt-2 px-3 h-7 rounded-full text-[12px] bg-[#F0F4FF] text-[#5B8FF9] font-medium" onclick="finish(this,'独行月球')" type="button">标记已看</button>
+</div>
+</div>
+<div class="flex gap-3 bg-white rounded-[16px] p-3">
+<a class="w-[62px] h-[84px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#4B5570] to-[#1C2233]" href="detail.html">
+<img alt="Poster of a suspense thriller in dark blue" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/c1d10721d64c45b9a83ebf2d641244c1.jpg"/>
+</a>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">消失的她</h3>
+<p class="mt-1 text-[11px] text-[#999999]">悬疑 / 犯罪 · 2小时1分钟</p>
+<button class="mt-2 px-3 h-7 rounded-full text-[12px] bg-[#F0F4FF] text-[#5B8FF9] font-medium" onclick="finish(this,'消失的她')" type="button">标记已看</button>
+</div>
+</div>
+<div class="flex gap-3 bg-white rounded-[16px] p-3">
+<a class="w-[62px] h-[84px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#F4A2C8] to-[#7C5CFC]" href="detail.html">
+<img alt="Barbie poster in vivid pink" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/0ca5c97929f648acac60f4dc00735002.jpg"/>
+</a>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">芭比</h3>
+<p class="mt-1 text-[11px] text-[#999999]">喜剧 / 奇幻 · 1小时54分钟</p>
+<button class="mt-2 px-3 h-7 rounded-full text-[12px] bg-[#F0F4FF] text-[#5B8FF9] font-medium" onclick="finish(this,'芭比')" type="button">标记已看</button>
+</div>
+</div>
+</div>
+<!-- 已看面板 -->
+<div class="hidden space-y-3" id="panel-2">
+<p class="text-[12px] text-[#999999]">已看 23 部 · 平均评分 4.8</p>
+<div class="flex gap-3 bg-white rounded-[16px] p-3">
+<a class="w-[62px] h-[84px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#24304C] to-[#5B8FF9]" href="detail.html">
+<img alt="The Wandering Earth 2 poster" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/4b03dcef626643e09e0500f9d497d232.jpg"/>
+</a>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">流浪地球2</h3>
+<div class="mt-1 flex items-center gap-0.5 text-[#FF9F1C]">
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">我的评分 5.0 · 2026-09-28 观看</p>
+</div>
+</div>
+<div class="flex gap-3 bg-white rounded-[16px] p-3">
+<a class="w-[62px] h-[84px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#3FB6E0] to-[#2C6BD1]" href="detail.html">
+<img alt="Zootopia poster with animal city" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/0df6d87fba4a4e1a9f66efe6630201c2.jpg"/>
+</a>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">疯狂动物城</h3>
+<div class="mt-1 flex items-center gap-0.5 text-[#FF9F1C]">
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px] text-[#E3E7F0]" icon="lucide:star"></iconify-icon>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">我的评分 4.0 · 2026-09-21 观看</p>
+</div>
+</div>
+<div class="flex gap-3 bg-white rounded-[16px] p-3">
+<a class="w-[62px] h-[84px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#8C5A2B] to-[#3B2A1C]" href="detail.html">
+<img alt="Creation of the Gods poster with bronze armor" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/e5abc95363f141ceaae6911953acd07b.jpg"/>
+</a>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-semibold text-[#333333]">封神第一部</h3>
+<div class="mt-1 flex items-center gap-0.5 text-[#FF9F1C]">
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px]" icon="lucide:star"></iconify-icon>
+<iconify-icon class="text-[13px] text-[#E3E7F0]" icon="lucide:star"></iconify-icon>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">我的评分 4.0 · 2026-09-14 观看</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- 底部导航 -->
+<nav class="shrink-0 bg-white border-t border-[#EDF0F7] px-1 pt-2 pb-5 flex items-start justify-around">
+<a class="flex-1 flex flex-col items-center gap-1" href="home.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:home"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">首页</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="discover.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:compass"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">发现</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="inspiration.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:sparkles"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">灵感</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="playlist.html">
+<span class="w-9 h-9 rounded-full bg-[#F0F4FF] flex items-center justify-center text-[#5B8FF9]">
+<iconify-icon class="text-[20px]" icon="lucide:bookmark"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#5B8FF9]">片单</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="profile.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:user"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">我的</span>
+</a>
+</nav>
+<!-- 更多操作面板 -->
+<div class="hidden absolute inset-0 z-40" id="sheet-more">
+<div class="absolute inset-0 bg-black/40" onclick="closeSheet('sheet-more')"></div>
+<div class="absolute left-0 right-0 bottom-0 bg-white rounded-t-[22px] px-4 pt-4 pb-7">
+<p class="text-[13px] text-[#999999] text-center" id="more-title">治愈系电影</p>
+<div class="mt-3 divide-y divide-[#F2F4F9]">
+<button class="w-full py-3.5 text-left text-[15px] text-[#333333] flex items-center gap-3" onclick="sheetAction('编辑片单信息')" type="button">
+<iconify-icon class="text-[18px] text-[#666666]" icon="lucide:pencil"></iconify-icon>
+              编辑片单
+            </button>
+<button class="w-full py-3.5 text-left text-[15px] text-[#333333] flex items-center gap-3" onclick="sheetAction('已设为私密片单')" type="button">
+<iconify-icon class="text-[18px] text-[#666666]" icon="lucide:lock"></iconify-icon>
+              设为私密
+            </button>
+<button class="w-full py-3.5 text-left text-[15px] text-[#333333] flex items-center gap-3" onclick="sheetAction('已复制分享链接')" type="button">
+<iconify-icon class="text-[18px] text-[#666666]" icon="lucide:share-2"></iconify-icon>
+              分享给朋友
+            </button>
+<button class="w-full py-3.5 text-left text-[15px] text-[#F5222D] flex items-center gap-3" onclick="sheetAction('片单已删除')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:trash-2"></iconify-icon>
+              删除片单
+            </button>
+</div>
+<button class="mt-3 w-full h-11 rounded-full bg-[#F5F7FB] text-[#666666] text-[15px]" onclick="closeSheet('sheet-more')" type="button">取消</button>
+</div>
+</div>
+<!-- 创建片单面板 -->
+<div class="hidden absolute inset-0 z-40" id="sheet-create">
+<div class="absolute inset-0 bg-black/40" onclick="closeSheet('sheet-create')"></div>
+<div class="absolute left-0 right-0 bottom-0 bg-white rounded-t-[22px] px-4 pt-5 pb-7">
+<h3 class="text-[16px] font-bold text-[#333333] text-center">创建片单</h3>
+<input class="mt-4 w-full h-11 px-3.5 rounded-[14px] bg-[#F5F7FB] text-[14px] text-[#333333] outline-none placeholder:text-[#999999]" id="new-name" placeholder="给片单起个名字，如「深夜治愈」" type="text"/>
+<div class="mt-4 flex gap-3">
+<button class="flex-1 h-11 rounded-full bg-[#F5F7FB] text-[#666666] text-[15px]" onclick="closeSheet('sheet-create')" type="button">取消</button>
+<button class="flex-1 h-11 rounded-full bg-[#5B8FF9] text-white text-[15px] font-semibold" onclick="createList()" type="button">创建</button>
+</div>
+</div>
+</div>
+<!-- 轻提示 -->
+<div class="hidden absolute left-1/2 -translate-x-1/2 bottom-32 z-50 px-4 py-2 rounded-full bg-[#333333]/90 text-white text-[13px] whitespace-nowrap" id="toast"></div>
+</div>
+<script>
+      var LIST_TAB_ON = 'relative pb-2.5 text-[14px] font-semibold text-[#333333]';
+      var LIST_TAB_OFF = 'relative pb-2.5 text-[14px] text-[#999999]';
+
+      function switchList(index) {
+        var tabs = document.querySelectorAll('[onclick^="switchList"]');
+        for (var i = 0; i < tabs.length; i++) {
+          var bar = tabs[i].querySelector('span');
+          if (i === index) {
+            tabs[i].className = LIST_TAB_ON;
+            bar.className = 'block absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]';
+          } else {
+            tabs[i].className = LIST_TAB_OFF;
+            bar.className = 'hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-[#5B8FF9]';
+          }
+        }
+        for (var k = 0; k < 3; k++) {
+          var panel = document.getElementById('panel-' + k);
+          if (k === index) {
+            panel.classList.remove('hidden');
+          } else {
+            panel.classList.add('hidden');
+          }
+        }
+      }
+
+      function openSheet(id, title) {
+        if (title) {
+          document.getElementById('more-title').textContent = title;
+        }
+        document.getElementById(id).classList.remove('hidden');
+      }
+
+      function closeSheet(id) {
+        document.getElementById(id).classList.add('hidden');
+      }
+
+      function sheetAction(msg) {
+        closeSheet('sheet-more');
+        toast(msg);
+      }
+
+      function createList() {
+        var input = document.getElementById('new-name');
+        var name = input.value.trim();
+        if (!name) {
+          toast('请先输入片单名称');
+          return;
+        }
+        closeSheet('sheet-create');
+        input.value = '';
+        toast('已创建片单「' + name + '」');
+      }
+
+      function finish(btn, name) {
+        btn.textContent = '已在已看';
+        btn.className = 'mt-2 px-3 h-7 rounded-full text-[12px] bg-[#EEFBF4] text-[#22C55E] font-medium';
+        toast('「' + name + '」已移入已看');
+      }
+
+      function toast(msg) {
+        var el = document.getElementById('toast');
+        el.textContent = msg;
+        el.classList.remove('hidden');
+        clearTimeout(window.__toastTimer);
+        window.__toastTimer = setTimeout(function () {
+          el.classList.add('hidden');
+        }, 1600);
+      }
+    </script>
+</body>
+</html>

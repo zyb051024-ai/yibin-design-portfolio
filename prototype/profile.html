@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="w-full h-full overflow-hidden" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>观影灵感 · 我的</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/echarts.min.js"></script>
+</head>
+<body class="w-full h-full m-0 overflow-hidden flex items-center justify-center bg-[#E8ECF4]">
+<div class="relative w-full h-full max-w-[393px] max-h-[852px] bg-[#F6F8FC] flex flex-col overflow-hidden" id="frame">
+<!-- iOS 状态栏 -->
+<div class="shrink-0 h-11 px-7 flex items-center justify-between bg-[#EAF0FF] text-[#333333]">
+<span class="text-[15px] font-semibold tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5">
+<iconify-icon class="text-[16px]" icon="lucide:signal"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:wifi"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:battery-full"></iconify-icon>
+</div>
+</div>
+<!-- 主滚动区 -->
+<main class="flex-1 min-h-0 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<!-- 用户信息 -->
+<div class="bg-gradient-to-b from-[#EAF0FF] to-[#F6F8FC] px-4 pb-5">
+<div class="flex items-center gap-3">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-gradient-to-br from-[#8FA8D8] to-[#5B8FF9] shrink-0">
+<img alt="Avatar of movie fan user profile photo" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/c37a4e0156ec4af798baceeb01ddc1d0.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h1 class="text-[19px] font-bold text-[#333333]">观影小达人</h1>
+<p class="mt-1 text-[12px] text-[#666666]">热爱电影，记录生活</p>
+</div>
+<button class="w-9 h-9 rounded-full bg-white/80 flex items-center justify-center text-[#666666] active:bg-white" onclick="toast('设置中心')" type="button">
+<iconify-icon class="text-[18px]" icon="lucide:settings"></iconify-icon>
+</button>
+</div>
+<!-- 数据统计 -->
+<div class="mt-4 grid grid-cols-4 bg-white rounded-[16px] py-3.5">
+<div class="flex flex-col items-center gap-1 border-r border-[#F2F4F9]">
+<span class="text-[18px] font-bold text-[#333333]">23</span>
+<span class="text-[11px] text-[#999999]">观影记录</span>
+</div>
+<div class="flex flex-col items-center gap-1 border-r border-[#F2F4F9]">
+<span class="text-[18px] font-bold text-[#333333]">12</span>
+<span class="text-[11px] text-[#999999]">想看</span>
+</div>
+<div class="flex flex-col items-center gap-1 border-r border-[#F2F4F9]">
+<span class="text-[18px] font-bold text-[#333333]">8</span>
+<span class="text-[11px] text-[#999999]">收藏</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-[18px] font-bold text-[#5B8FF9]">4.8</span>
+<span class="text-[11px] text-[#999999]">平均评分</span>
+</div>
+</div>
+<!-- 会员入口 -->
+<a class="mt-3 relative block overflow-hidden rounded-[16px] bg-gradient-to-r from-[#3E5C9A] via-[#4E74C8] to-[#5B8FF9] p-4 active:opacity-95" href="vip.html">
+<iconify-icon class="absolute -right-2 -top-3 text-[86px] text-white/10" icon="lucide:crown"></iconify-icon>
+<div class="relative flex items-center gap-3">
+<span class="w-10 h-10 rounded-[13px] bg-white/20 text-white flex items-center justify-center shrink-0">
+<iconify-icon class="text-[21px]" icon="lucide:crown"></iconify-icon>
+</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-[15px] font-bold text-white">会员中心</span>
+<span class="px-1.5 py-0.5 rounded-full bg-white/25 text-white text-[10px]">未开通</span>
+</div>
+<p class="mt-1 text-[11px] text-white/85">首月 6.9 元起 · 免广告 / 4K 画质 / 离线下载</p>
+</div>
+<span class="shrink-0 flex items-center gap-0.5 px-3 py-1.5 rounded-full bg-white text-[#4E74C8] text-[12px] font-medium">
+立即开通
+<iconify-icon class="text-[13px]" icon="lucide:chevron-right"></iconify-icon>
+</span>
+</div>
+</a>
+</div>
+<div class="px-4 pb-6 space-y-3">
+<!-- 观影数据 -->
+<section class="bg-white rounded-[18px] p-4">
+<div class="flex items-center justify-between">
+<h2 class="text-[15px] font-bold text-[#333333]">我的观影数据</h2>
+<span class="text-[12px] text-[#999999]">近 6 个月</span>
+</div>
+<div class="mt-3 flex items-center gap-3">
+<div class="rounded-[12px] bg-[#F0F4FF] px-3 py-2 text-center shrink-0">
+<p class="text-[11px] text-[#5B8FF9]">本周观影</p>
+<p class="text-[17px] font-bold text-[#5B8FF9] leading-tight">3 <span class="text-[11px] font-normal">部</span></p>
+</div>
+<p class="text-[12px] text-[#999999] leading-relaxed">比上周多 1 部，喜剧片占比 60%，最常观看时段是 21:00 - 23:00。</p>
+</div>
+<div class="mt-3 w-full h-[136px]" id="chart"></div>
+</section>
+<!-- 我的偏好 -->
+<section class="bg-white rounded-[18px] p-4">
+<div class="flex items-center justify-between">
+<h2 class="text-[15px] font-bold text-[#333333]">我的偏好</h2>
+<button class="flex items-center text-[12px] text-[#999999] active:text-[#5B8FF9]" onclick="toast('偏好设置：可调整类型权重')" type="button">
+                查看更多
+                <iconify-icon class="text-[14px]" icon="lucide:chevron-right"></iconify-icon>
+</button>
+</div>
+<div class="mt-3 flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-full bg-[#F0F4FF] text-[#5B8FF9] text-[12px]">喜剧 38%</span>
+<span class="px-3 py-1.5 rounded-full bg-[#F0F4FF] text-[#5B8FF9] text-[12px]">科幻 26%</span>
+<span class="px-3 py-1.5 rounded-full bg-[#F5F7FB] text-[#666666] text-[12px]">动作 18%</span>
+<span class="px-3 py-1.5 rounded-full bg-[#F5F7FB] text-[#666666] text-[12px]">爱情 12%</span>
+<span class="px-3 py-1.5 rounded-full bg-[#F5F7FB] text-[#666666] text-[12px]">悬疑 6%</span>
+</div>
+<p class="mt-3 text-[12px] text-[#999999] leading-relaxed">基于你的观看记录与评分自动计算，每周更新一次。</p>
+</section>
+<!-- 功能列表 -->
+<section class="bg-white rounded-[18px] overflow-hidden">
+<a class="flex items-center gap-3 px-4 py-3.5 active:bg-[#FAFBFE]" href="playlist.html">
+<span class="w-8 h-8 rounded-[10px] bg-[#F0F4FF] text-[#5B8FF9] flex items-center justify-center">
+<iconify-icon class="text-[16px]" icon="lucide:history"></iconify-icon>
+</span>
+<span class="flex-1 text-[14px] text-[#333333]">观影记录</span>
+<span class="text-[12px] text-[#999999]">23 条</span>
+<iconify-icon class="text-[17px] text-[#C8CDD8]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<div class="h-px bg-[#F2F4F9] ml-[60px]"></div>
+<a class="flex items-center gap-3 px-4 py-3.5 active:bg-[#FAFBFE]" href="playlist.html">
+<span class="w-8 h-8 rounded-[10px] bg-[#EEFBF4] text-[#22C55E] flex items-center justify-center">
+<iconify-icon class="text-[16px]" icon="lucide:bookmark"></iconify-icon>
+</span>
+<span class="flex-1 text-[14px] text-[#333333]">我的片单</span>
+<span class="text-[12px] text-[#999999]">4 个</span>
+<iconify-icon class="text-[17px] text-[#C8CDD8]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<div class="h-px bg-[#F2F4F9] ml-[60px]"></div>
+<a class="flex items-center gap-3 px-4 py-3.5 active:bg-[#FAFBFE]" href="playlist.html">
+<span class="w-8 h-8 rounded-[10px] bg-[#FFF4ED] text-[#FF7A45] flex items-center justify-center">
+<iconify-icon class="text-[16px]" icon="lucide:star"></iconify-icon>
+</span>
+<span class="flex-1 text-[14px] text-[#333333]">我的评分</span>
+<span class="text-[12px] text-[#999999]">平均 4.8</span>
+<iconify-icon class="text-[17px] text-[#C8CDD8]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<div class="h-px bg-[#F2F4F9] ml-[60px]"></div>
+<button class="w-full flex items-center gap-3 px-4 py-3.5 active:bg-[#FAFBFE]" onclick="toast('设置：通知 / 隐私 / 关于')" type="button">
+<span class="w-8 h-8 rounded-[10px] bg-[#F2EEFF] text-[#7C5CFC] flex items-center justify-center">
+<iconify-icon class="text-[16px]" icon="lucide:settings"></iconify-icon>
+</span>
+<span class="flex-1 text-left text-[14px] text-[#333333]">设置</span>
+<iconify-icon class="text-[17px] text-[#C8CDD8]" icon="lucide:chevron-right"></iconify-icon>
+</button>
+</section>
+</div>
+</main>
+<!-- 底部导航 -->
+<nav class="shrink-0 bg-white border-t border-[#EDF0F7] px-1 pt-2 pb-5 flex items-start justify-around">
+<a class="flex-1 flex flex-col items-center gap-1" href="home.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:home"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">首页</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="discover.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:compass"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">发现</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="inspiration.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:sparkles"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">灵感</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="playlist.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:bookmark"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">片单</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="profile.html">
+<span class="w-9 h-9 rounded-full bg-[#F0F4FF] flex items-center justify-center text-[#5B8FF9]">
+<iconify-icon class="text-[20px]" icon="lucide:user"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#5B8FF9]">我的</span>
+</a>
+</nav>
+<!-- 轻提示 -->
+<div class="hidden absolute left-1/2 -translate-x-1/2 bottom-28 z-50 px-4 py-2 rounded-full bg-[#333333]/90 text-white text-[13px] whitespace-nowrap" id="toast"></div>
+</div>
+<script>
+      function toast(msg) {
+        var el = document.getElementById('toast');
+        el.textContent = msg;
+        el.classList.remove('hidden');
+        clearTimeout(window.__toastTimer);
+        window.__toastTimer = setTimeout(function () {
+          el.classList.add('hidden');
+        }, 1600);
+      }
+
+      var chart = echarts.init(document.getElementById('chart'));
+      chart.setOption({
+        title: {
+          text: '月度观影数量（部）',
+          left: 0,
+          top: 0,
+          textStyle: { color: '#999999', fontSize: 11, fontWeight: 'normal' }
+        },
+        grid: { left: 26, right: 8, top: 30, bottom: 20 },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { type: 'shadow' },
+          valueFormatter: function (value) {
+            return value + ' 部';
+          }
+        },
+        xAxis: {
+          type: 'category',
+          data: ['5月', '6月', '7月', '8月', '9月', '10月'],
+          axisLine: { lineStyle: { color: '#EEF0F7' } },
+          axisTick: { show: false },
+          axisLabel: { color: '#999999', fontSize: 10 }
+        },
+        yAxis: {
+          type: 'value',
+          minInterval: 1,
+          axisLine: { show: false },
+          axisTick: { show: false },
+          splitLine: { lineStyle: { color: '#F2F4F9' } },
+          axisLabel: { color: '#999999', fontSize: 10 }
+        },
+        series: [
+          {
+            name: '观影数量',
+            type: 'bar',
+            barWidth: 16,
+            data: [3, 5, 2, 6, 4, 3],
+            itemStyle: { color: '#5B8FF9', borderRadius: [6, 6, 0, 0] },
+            label: { show: true, position: 'top', color: '#666666', fontSize: 10 }
+          }
+        ]
+      });
+
+      window.addEventListener('resize', function () {
+        chart.resize();
+      });
+    </script>
+</body>
+</html>

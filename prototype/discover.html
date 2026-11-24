@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="w-full h-full overflow-hidden" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>观影灵感 · 发现</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+</head>
+<body class="w-full h-full m-0 overflow-hidden flex items-center justify-center bg-[#E8ECF4]">
+<div class="relative w-full h-full max-w-[393px] max-h-[852px] bg-[#F6F8FC] flex flex-col overflow-hidden" id="frame">
+<!-- iOS 状态栏 -->
+<div class="shrink-0 h-11 px-7 flex items-center justify-between bg-white text-[#333333]">
+<span class="text-[15px] font-semibold tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5">
+<iconify-icon class="text-[16px]" icon="lucide:signal"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:wifi"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:battery-full"></iconify-icon>
+</div>
+</div>
+<!-- 主滚动区 -->
+<main class="flex-1 min-h-0 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<!-- 顶部标题 + 搜索 -->
+<div class="bg-white px-4 pb-4">
+<div class="flex items-start justify-between">
+<div>
+<h1 class="text-[23px] font-bold text-[#333333]">发现</h1>
+<p class="mt-1 text-[12px] text-[#999999]">让好电影，遇见此刻的你</p>
+</div>
+<a aria-label="搜索" class="w-9 h-9 shrink-0 rounded-full bg-[#F5F7FB] flex items-center justify-center text-[#666666] active:bg-[#E9EEF9]" href="search.html">
+<iconify-icon class="text-[18px]" icon="lucide:search"></iconify-icon>
+</a>
+</div>
+</div>
+<div class="px-4 pt-4 pb-6 space-y-4">
+<!-- 轮播 banner -->
+<section class="relative h-[168px] rounded-[20px] overflow-hidden bg-gradient-to-br from-[#141A33] via-[#243056] to-[#5B8FF9]">
+<img alt="An astronaut drifting through deep space among distant stars" class="absolute inset-0 w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/d0b5eaa7ac1d4ebca00db00f3188071a.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B1024]/95 via-[#0B1024]/40 to-transparent"></div>
+<span class="absolute left-4 top-3.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur text-white text-[10px] tracking-wide">精选专题</span>
+<div class="absolute left-4 bottom-6 right-16">
+<h2 class="text-[22px] font-bold text-white leading-tight">宇宙探索</h2>
+<p class="mt-1 text-[12.5px] text-white/80">那些关于太空的电影</p>
+</div>
+<div class="absolute left-4 bottom-3 flex items-center gap-1.5">
+<span class="w-5 h-1.5 rounded-full bg-white"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-white/45"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-white/45"></span>
+</div>
+</section>
+<!-- 四个功能入口 -->
+<section class="bg-white rounded-[18px] py-4 px-1 grid grid-cols-4 gap-1">
+<a class="flex flex-col items-center gap-2 active:opacity-70" href="inspiration.html">
+<span class="w-11 h-11 rounded-[14px] bg-[#F0F4FF] text-[#5B8FF9] flex items-center justify-center">
+<iconify-icon class="text-[21px]" icon="lucide:star"></iconify-icon>
+</span>
+<span class="text-[11px] text-[#666666]">主题专题</span>
+</a>
+<a class="flex flex-col items-center gap-2 active:opacity-70" href="results.html">
+<span class="w-11 h-11 rounded-[14px] bg-[#FFF4ED] text-[#FF7A45] flex items-center justify-center">
+<iconify-icon class="text-[21px]" icon="lucide:crown"></iconify-icon>
+</span>
+<span class="text-[11px] text-[#666666]">影视榜单</span>
+</a>
+<a class="flex flex-col items-center gap-2 active:opacity-70" href="detail.html">
+<span class="w-11 h-11 rounded-[14px] bg-[#EEF2FF] text-[#5B8FF9] flex items-center justify-center">
+<iconify-icon class="text-[21px]" icon="lucide:users"></iconify-icon>
+</span>
+<span class="text-[11px] text-[#666666]">影人专栏</span>
+</a>
+<a class="flex flex-col items-center gap-2 active:opacity-70" href="inspiration.html">
+<span class="w-11 h-11 rounded-[14px] bg-[#F2EEFF] text-[#7C5CFC] flex items-center justify-center">
+<iconify-icon class="text-[21px]" icon="lucide:book-open"></iconify-icon>
+</span>
+<span class="text-[11px] text-[#666666]">观影指南</span>
+</a>
+</section>
+<!-- 今日推荐主题 -->
+<section class="bg-white rounded-[18px] p-4">
+<div class="flex items-center justify-between">
+<h3 class="text-[16px] font-bold text-[#333333]">今日推荐主题</h3>
+<button class="flex items-center gap-1 text-[12px] text-[#999999] active:text-[#5B8FF9]" onclick="toast('已为你换一批主题')" type="button">
+                换一换
+                <iconify-icon class="text-[14px]" icon="lucide:refresh-cw"></iconify-icon>
+</button>
+</div>
+<div class="mt-3 flex gap-3">
+<a class="flex-1 min-w-0 relative h-[132px] rounded-[14px] overflow-hidden bg-gradient-to-br from-[#F7B267] to-[#D97A3C]" href="results.html">
+<img alt="Warm sunset glow over a calm sea" class="absolute inset-0 w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/264c52f642214d7abfd0d3964dae8300.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#3A1F0A]/90 via-[#3A1F0A]/25 to-transparent"></div>
+<div class="absolute left-2.5 right-2.5 bottom-2.5">
+<p class="text-[12.5px] font-bold text-white leading-tight">治愈系电影</p>
+<p class="mt-0.5 text-[10px] text-white/80 leading-tight">温柔治愈心灵</p>
+</div>
+</a>
+<a class="flex-1 min-w-0 relative h-[132px] rounded-[14px] overflow-hidden bg-gradient-to-br from-[#3B4A6B] to-[#141A2E]" href="results.html">
+<img alt="Moody mystery scene in deep blue shadow" class="absolute inset-0 w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/024ee4f997e345a99602a50789c6d6a8.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#05070F]/92 via-[#05070F]/30 to-transparent"></div>
+<div class="absolute left-2.5 right-2.5 bottom-2.5">
+<p class="text-[12.5px] font-bold text-white leading-tight">高分悬疑</p>
+<p class="mt-0.5 text-[10px] text-white/80 leading-tight">烧脑反转</p>
+</div>
+</a>
+<a class="flex-1 min-w-0 relative h-[132px] rounded-[14px] overflow-hidden bg-gradient-to-br from-[#F4A2C8] to-[#9B6BD6]" href="results.html">
+<img alt="Romantic couple silhouette at dusk" class="absolute inset-0 w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/d91f633876704379bc77bf74da7db4de.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#4A1030]/90 via-[#4A1030]/25 to-transparent"></div>
+<div class="absolute left-2.5 right-2.5 bottom-2.5">
+<p class="text-[12.5px] font-bold text-white leading-tight">经典爱情</p>
+<p class="mt-0.5 text-[10px] text-white/80 leading-tight">浪漫永不过时</p>
+</div>
+</a>
+</div>
+</section>
+<!-- 为你推荐 -->
+<section class="bg-white rounded-[18px] p-4">
+<div class="flex items-center justify-between">
+<h3 class="text-[16px] font-bold text-[#333333]">为你推荐</h3>
+<a class="flex items-center gap-0.5 text-[12px] text-[#5B8FF9] active:opacity-70" href="results.html">
+<iconify-icon class="text-[13px]" icon="lucide:sparkles"></iconify-icon>
+                个性化推荐
+                <iconify-icon class="text-[14px]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+</div>
+<div class="mt-3 flex gap-3 overflow-x-auto pb-1 [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<a class="w-[112px] shrink-0" href="detail.html">
+<div class="w-[112px] h-[152px] rounded-[14px] overflow-hidden bg-gradient-to-br from-[#2A3A5C] to-[#5B8FF9]">
+<img alt="Melancholic seaside town scene" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/264c52f642214d7abfd0d3964dae8300.jpg"/>
+</div>
+<p class="mt-2 text-[13px] font-semibold text-[#333333] truncate">海边的曼彻斯特</p>
+<p class="text-[12px] font-semibold text-[#FF9F1C]">8.2</p>
+</a>
+<a class="w-[112px] shrink-0" href="detail.html">
+<div class="w-[112px] h-[152px] rounded-[14px] overflow-hidden bg-gradient-to-br from-[#1F5C4A] to-[#0F2C24]">
+<img alt="Neon night street in Hong Kong" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/d91f633876704379bc77bf74da7db4de.jpg"/>
+</div>
+<p class="mt-2 text-[13px] font-semibold text-[#333333] truncate">重庆森林</p>
+<p class="text-[12px] font-semibold text-[#FF9F1C]">8.1</p>
+</a>
+<a class="w-[112px] shrink-0" href="detail.html">
+<div class="w-[112px] h-[152px] rounded-[14px] overflow-hidden bg-gradient-to-br from-[#8CC63F] to-[#3E7A2E]">
+<img alt="Lush green countryside in summer" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/024ee4f997e345a99602a50789c6d6a8.jpg"/>
+</div>
+<p class="mt-2 text-[13px] font-semibold text-[#333333] truncate">小森林</p>
+<p class="text-[12px] font-semibold text-[#FF9F1C]">8.0</p>
+</a>
+<a class="w-[112px] shrink-0" href="detail.html">
+<div class="w-[112px] h-[152px] rounded-[14px] overflow-hidden bg-gradient-to-br from-[#2E8BC0] to-[#7C5CFC]">
+<img alt="Boy and tiger on a lifeboat at sea" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/d0b5eaa7ac1d4ebca00db00f3188071a.jpg"/>
+</div>
+<p class="mt-2 text-[13px] font-semibold text-[#333333] truncate">少年派的奇幻漂流</p>
+<p class="text-[12px] font-semibold text-[#FF9F1C]">8.7</p>
+</a>
+</div>
+</section>
+<!-- 热门话题 -->
+<section class="bg-white rounded-[18px] p-4">
+<div class="flex items-center justify-between">
+<h3 class="text-[16px] font-bold text-[#333333]">热门话题</h3>
+<a class="flex items-center text-[12px] text-[#999999] active:text-[#5B8FF9]" href="results.html">
+                全部
+                <iconify-icon class="text-[14px]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+</div>
+<div class="mt-3 space-y-2.5">
+<a class="flex items-center gap-3 px-3 py-3 rounded-[14px] bg-[#FFF6F0] active:bg-[#FFEEE3]" href="results.html">
+<span class="w-9 h-9 shrink-0 rounded-[12px] bg-[#FFEDE2] text-[#FF7A45] flex items-center justify-center">
+<iconify-icon class="text-[18px]" icon="lucide:flame"></iconify-icon>
+</span>
+<div class="min-w-0">
+<p class="text-[13.5px] font-semibold text-[#333333] truncate">#你最喜欢的导演</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">12.3w 人参与</p>
+</div>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-[14px] bg-[#F1F5FF] active:bg-[#E6EDFF]" href="results.html">
+<span class="w-9 h-9 shrink-0 rounded-[12px] bg-[#E4ECFF] text-[#5B8FF9] flex items-center justify-center">
+<iconify-icon class="text-[18px]" icon="lucide:message-circle"></iconify-icon>
+</span>
+<div class="min-w-0">
+<p class="text-[13.5px] font-semibold text-[#333333] truncate">#电影中的治愈台词</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">8.7w 人参与</p>
+</div>
+</a>
+</div>
+</section>
+</div>
+</main>
+<!-- 底部导航 -->
+<nav class="shrink-0 bg-white border-t border-[#EDF0F7] px-1 pt-2 pb-5 flex items-start justify-around">
+<a class="flex-1 flex flex-col items-center gap-1" href="home.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:home"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">首页</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="discover.html">
+<span class="w-9 h-9 rounded-full bg-[#F0F4FF] flex items-center justify-center text-[#5B8FF9]">
+<iconify-icon class="text-[20px]" icon="lucide:compass"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#5B8FF9]">发现</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="inspiration.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:sparkles"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">灵感</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="playlist.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:bookmark"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">片单</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="profile.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:user"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">我的</span>
+</a>
+</nav>
+<!-- 轻提示 -->
+<div class="hidden absolute left-1/2 -translate-x-1/2 bottom-28 z-50 px-4 py-2 rounded-full bg-[#333333]/90 text-white text-[13px] whitespace-nowrap" id="toast"></div>
+</div>
+<script>
+      function toast(msg) {
+        var el = document.getElementById('toast');
+        el.textContent = msg;
+        el.classList.remove('hidden');
+        clearTimeout(window.__toastTimer);
+        window.__toastTimer = setTimeout(function () {
+          el.classList.add('hidden');
+        }, 1600);
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="w-full h-full overflow-hidden" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>观影灵感 · 搜索结果</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+</head>
+<body class="w-full h-full m-0 overflow-hidden flex items-center justify-center bg-[#E8ECF4]">
+<div class="relative w-full h-full max-w-[393px] max-h-[852px] bg-[#F6F8FC] flex flex-col overflow-hidden" id="frame">
+<!-- iOS 状态栏 -->
+<div class="shrink-0 h-11 px-7 flex items-center justify-between bg-white text-[#333333]">
+<span class="text-[15px] font-semibold tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5">
+<iconify-icon class="text-[16px]" icon="lucide:signal"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:wifi"></iconify-icon>
+<iconify-icon class="text-[16px]" icon="lucide:battery-full"></iconify-icon>
+</div>
+</div>
+<!-- 顶部搜索栏 -->
+<header class="shrink-0 bg-white px-3 pb-3 flex items-center gap-2">
+<a aria-label="返回首页" class="w-9 h-9 shrink-0 rounded-full flex items-center justify-center text-[#333333] active:bg-[#F5F7FB]" href="home.html">
+<iconify-icon class="text-[20px]" icon="lucide:arrow-left"></iconify-icon>
+</a>
+<div class="flex-1 min-w-0 h-10 px-3 flex items-center gap-2 rounded-full bg-[#F5F7FB]">
+<iconify-icon class="text-[17px] text-[#999999]" icon="lucide:search"></iconify-icon>
+<input class="flex-1 min-w-0 bg-transparent text-[14px] text-[#333333] outline-none placeholder:text-[#999999]" id="search-input" oninput="applyFilter()" placeholder="搜索电影、演员、导演" type="text" value="星球"/>
+<button aria-label="清空关键词" class="w-5 h-5 shrink-0 rounded-full bg-[#D5DBE8] text-white flex items-center justify-center active:bg-[#BFC7D8]" onclick="clearInput()" type="button">
+<iconify-icon class="text-[12px]" icon="lucide:x"></iconify-icon>
+</button>
+</div>
+<button class="shrink-0 px-1 text-[13px] font-medium text-[#5B8FF9] active:opacity-60" onclick="runSearch()" type="button">搜索</button>
+</header>
+<!-- 结果分类 Tab -->
+<div class="shrink-0 bg-white px-4 flex items-center gap-6 border-b border-[#EDF0F7]">
+<button class="tab relative py-2.5 text-[13px] font-bold text-[#333333]" data-tab="movie" onclick="pickTab(this)" type="button">
+                电影
+                <span class="bar absolute left-1/2 -translate-x-1/2 -bottom-px w-6 h-[3px] rounded-full bg-[#5B8FF9]"></span>
+</button>
+<button class="tab relative py-2.5 text-[13px] text-[#999999]" data-tab="people" onclick="pickTab(this)" type="button">
+                影人
+                <span class="bar absolute left-1/2 -translate-x-1/2 -bottom-px w-6 h-[3px] rounded-full bg-[#5B8FF9] hidden"></span>
+</button>
+<button class="tab relative py-2.5 text-[13px] text-[#999999]" data-tab="chart" onclick="pickTab(this)" type="button">
+                榜单
+                <span class="bar absolute left-1/2 -translate-x-1/2 -bottom-px w-6 h-[3px] rounded-full bg-[#5B8FF9] hidden"></span>
+</button>
+</div>
+<!-- 主滚动区 -->
+<main class="flex-1 min-h-0 overflow-y-auto overflow-x-hidden [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="px-4 pt-3 pb-6">
+<p class="text-[12px] text-[#999999]" id="count-text">找到 6 部与「星球」相关的电影</p>
+<!-- 电影结果 -->
+<div class="pane mt-3 space-y-3" data-pane="movie">
+<a class="movie-item flex gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="流浪地球 星球 科幻 太空 吴京" href="detail.html">
+<div class="w-[78px] h-[106px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#2A3350] to-[#5B8FF9]">
+<img alt="The Wandering Earth 2 poster with giant planetary engines" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/57cdd08f62bb467e9ca63edee2999f40.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline gap-2">
+<h3 class="text-[16px] font-bold text-[#333333] truncate">流浪地球2</h3>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">8.3</span>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">科幻 / 冒险</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">2小时53分钟 · 2023</p>
+<p class="mt-1.5 text-[12px] text-[#666666] leading-relaxed">太阳危机逼近，人类用一万座行星发动机推动地球，踏上流浪之旅。</p>
+</div>
+</a>
+<a class="movie-item flex gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="独行月球 星球 科幻 月球 沈腾" href="detail.html">
+<div class="w-[78px] h-[106px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#3B3A66] to-[#7C5CFC]">
+<img alt="Moon Man poster with astronaut standing on lunar surface" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/1ceb58ac160b4ded98c646e7653a1ed8.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline gap-2">
+<h3 class="text-[16px] font-bold text-[#333333] truncate">独行月球</h3>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">7.2</span>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">喜剧 / 科幻</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">1小时56分钟 · 2022</p>
+<p class="mt-1.5 text-[12px] text-[#666666] leading-relaxed">被意外留在月球的维修工独孤月，一边爆笑求生，一边成为地球人的精神寄托。</p>
+</div>
+</a>
+<a class="movie-item flex gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="星球大战 星球 科幻 动作 绝地" href="detail.html">
+<div class="w-[78px] h-[106px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#1C2130] to-[#4B6BD6]">
+<img alt="Star Wars The Force Awakens poster with a lightsaber duel" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/9f2ac477006c4cb387ad9bfc5ee71644.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline gap-2">
+<h3 class="text-[16px] font-bold text-[#333333] truncate">星球大战：原力觉醒</h3>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">8.1</span>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">科幻 / 动作</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">2小时18分钟 · 2015</p>
+<p class="mt-1.5 text-[12px] text-[#666666] leading-relaxed">新的反抗军重新集结，一名拾荒少女与失踪的绝地武士线索相遇。</p>
+</div>
+</a>
+<a class="movie-item flex gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="星际穿越 星球 科幻 太空 诺兰" href="detail.html">
+<div class="w-[78px] h-[106px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#20304A] to-[#8FA8E8]">
+<img alt="Interstellar poster with an astronaut near a ringed planet" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/608d2a5c52364179b4df2566c1ec1ec4.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline gap-2">
+<h3 class="text-[16px] font-bold text-[#333333] truncate">星际穿越</h3>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">9.4</span>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">科幻 / 剧情</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">2小时49分钟 · 2014</p>
+<p class="mt-1.5 text-[12px] text-[#666666] leading-relaxed">地球濒临枯竭，父亲穿过虫洞为人类寻找新的家园。</p>
+</div>
+</a>
+<a class="movie-item flex gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="火星救援 星球 科幻 太空 马特达蒙" href="detail.html">
+<div class="w-[78px] h-[106px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#B4552F] to-[#E08A3C]">
+<img alt="The Martian poster with an astronaut on a red desert planet" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/2792dc02396144d4928cb2e57210c964.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline gap-2">
+<h3 class="text-[16px] font-bold text-[#333333] truncate">火星救援</h3>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">8.5</span>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">科幻 / 冒险</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">2小时24分钟 · 2015</p>
+<p class="mt-1.5 text-[12px] text-[#666666] leading-relaxed">被遗留在火星的宇航员靠一己之力种土豆、修飞船，等待救援。</p>
+</div>
+</a>
+<a class="movie-item flex gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="银河护卫队 星球 科幻 漫威 喜剧" href="detail.html">
+<div class="w-[78px] h-[106px] shrink-0 rounded-[12px] overflow-hidden bg-gradient-to-br from-[#2E6E6A] to-[#4FB6A8]">
+<img alt="Guardians of the Galaxy poster with a space crew silhouette" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/37388af4e32749a49986c166273b4563.jpg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline gap-2">
+<h3 class="text-[16px] font-bold text-[#333333] truncate">银河护卫队</h3>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">8.1</span>
+</div>
+<p class="mt-1 text-[11px] text-[#999999]">科幻 / 动作</p>
+<p class="mt-0.5 text-[11px] text-[#999999]">2小时01分钟 · 2014</p>
+<p class="mt-1.5 text-[12px] text-[#666666] leading-relaxed">一群宇宙混混被迫组队，在银河系里守护一颗神秘球体。</p>
+</div>
+</a>
+</div>
+<!-- 影人结果 -->
+<div class="pane mt-3 space-y-3" data-pane="people" style="display:none">
+<a class="person-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="诺兰 导演 编剧 星球 科幻 星际穿越" href="detail.html">
+<span class="w-12 h-12 shrink-0 block rounded-full overflow-hidden bg-gradient-to-br from-[#5B8FF9] to-[#7C5CFC]">
+<img alt="Portrait of director Christopher Nolan" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/27db199fbeb64b7ea83b9a124bc81d9e.jpg"/>
+</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">克里斯托弗·诺兰</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">导演 / 编剧 · 英国</p>
+<p class="mt-1 text-[12px] text-[#666666] truncate">代表作：星际穿越 · 盗梦空间 · 奥本·海默</p>
+</div>
+<iconify-icon class="shrink-0 text-[16px] text-[#C7CEDA]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<a class="person-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="吴京 演员 导演 星球 流浪地球 动作" href="detail.html">
+<span class="w-12 h-12 shrink-0 block rounded-full overflow-hidden bg-gradient-to-br from-[#F2C14E] to-[#D96B2B]">
+<img alt="Portrait of Chinese actor Wu Jing" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/ae98a45e57cd4db8becccaa56ca69644.jpg"/>
+</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">吴京</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">演员 / 导演 · 中国</p>
+<p class="mt-1 text-[12px] text-[#666666] truncate">代表作：流浪地球 · 战狼2 · 长津湖</p>
+</div>
+<iconify-icon class="shrink-0 text-[16px] text-[#C7CEDA]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<a class="person-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="马特达蒙 演员 星球 火星救援 星际穿越" href="detail.html">
+<span class="w-12 h-12 shrink-0 block rounded-full overflow-hidden bg-gradient-to-br from-[#3FB6E0] to-[#2C6BD1]">
+<img alt="Portrait of American actor Matt Damon" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/fd4cf503186144e88d9ad4d2f3cdcc8a.jpg"/>
+</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">马特·达蒙</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">演员 · 美国</p>
+<p class="mt-1 text-[12px] text-[#666666] truncate">代表作：火星救援 · 星际穿越 · 谍影重重</p>
+</div>
+<iconify-icon class="shrink-0 text-[16px] text-[#C7CEDA]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<a class="person-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="刘德华 演员 制片人 星球 流浪地球2" href="detail.html">
+<span class="w-12 h-12 shrink-0 block rounded-full overflow-hidden bg-gradient-to-br from-[#8C5A2B] to-[#3B2A1C]">
+<img alt="Portrait of Hong Kong actor Andy Lau" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/fd24e7a76dd7449ea6ee011e398d9ce2.jpg"/>
+</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">刘德华</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">演员 / 制片人 · 中国香港</p>
+<p class="mt-1 text-[12px] text-[#666666] truncate">代表作：流浪地球2 · 无间道 · 拆弹专家</p>
+</div>
+<iconify-icon class="shrink-0 text-[16px] text-[#C7CEDA]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+<a class="person-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" data-keywords="沈腾 演员 喜剧 星球 独行月球" href="detail.html">
+<span class="w-12 h-12 shrink-0 block rounded-full overflow-hidden bg-gradient-to-br from-[#F4A2C8] to-[#7C5CFC]">
+<img alt="Portrait of Chinese actor Shen Teng" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-10-09/24cccdbcfe82482985d095bf56b46c95.jpg"/>
+</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">沈腾</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">演员 · 中国</p>
+<p class="mt-1 text-[12px] text-[#666666] truncate">代表作：独行月球 · 夏洛特烦恼 · 你好，李焕英</p>
+</div>
+<iconify-icon class="shrink-0 text-[16px] text-[#C7CEDA]" icon="lucide:chevron-right"></iconify-icon>
+</a>
+</div>
+<!-- 榜单结果 -->
+<div class="pane mt-3 space-y-3" data-pane="chart" style="display:none">
+<a class="chart-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" href="detail.html">
+<span class="w-6 shrink-0 text-center text-[16px] font-bold text-[#FF7A45]">1</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">星际穿越</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">科幻 / 剧情 · 2014</p>
+</div>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">9.4</span>
+</a>
+<a class="chart-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" href="detail.html">
+<span class="w-6 shrink-0 text-center text-[16px] font-bold text-[#FF7A45]">2</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">火星救援</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">科幻 / 冒险 · 2015</p>
+</div>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">8.5</span>
+</a>
+<a class="chart-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" href="detail.html">
+<span class="w-6 shrink-0 text-center text-[16px] font-bold text-[#FF7A45]">3</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">流浪地球2</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">科幻 / 冒险 · 2023</p>
+</div>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">8.3</span>
+</a>
+<a class="chart-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" href="detail.html">
+<span class="w-6 shrink-0 text-center text-[16px] font-bold text-[#999999]">4</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">星球大战：原力觉醒</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">科幻 / 动作 · 2015</p>
+</div>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">8.1</span>
+</a>
+<a class="chart-item flex items-center gap-3 bg-white rounded-[16px] p-3 active:bg-[#FAFBFE]" href="detail.html">
+<span class="w-6 shrink-0 text-center text-[16px] font-bold text-[#999999]">5</span>
+<div class="flex-1 min-w-0">
+<h3 class="text-[15px] font-bold text-[#333333] truncate">银河护卫队</h3>
+<p class="mt-0.5 text-[12px] text-[#999999]">科幻 / 动作 · 2014</p>
+</div>
+<span class="shrink-0 text-[13px] font-bold text-[#FF9F1C]">8.1</span>
+</a>
+</div>
+<!-- 空结果 -->
+<div class="py-16 text-center" id="empty" style="display:none">
+<span class="mx-auto w-14 h-14 rounded-full bg-[#F0F4FF] text-[#5B8FF9] flex items-center justify-center">
+<iconify-icon class="text-[24px]" icon="lucide:search-x"></iconify-icon>
+</span>
+<p class="mt-3 text-[14px] font-medium text-[#333333]">没有找到相关结果</p>
+<p class="mt-1 text-[12px] text-[#999999]">换个关键词试试，比如「星球」「诺兰」</p>
+</div>
+<!-- 没有更多 -->
+<div class="pt-4 pb-1 text-center" id="nomore">
+<span class="text-[12px] text-[#C0C6D4]">—— 已显示全部结果 ——</span>
+</div>
+</div>
+</main>
+<!-- 底部导航 -->
+<nav class="shrink-0 bg-white border-t border-[#EDF0F7] px-1 pt-2 pb-5 flex items-start justify-around">
+<a class="flex-1 flex flex-col items-center gap-1" href="home.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:home"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">首页</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="discover.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:compass"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">发现</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="inspiration.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:sparkles"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">灵感</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="playlist.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:bookmark"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">片单</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1" href="profile.html">
+<span class="w-9 h-9 rounded-full flex items-center justify-center text-[#999999]">
+<iconify-icon class="text-[20px]" icon="lucide:user"></iconify-icon>
+</span>
+<span class="text-[10px] font-medium text-[#999999]">我的</span>
+</a>
+</nav>
+<!-- 轻提示 -->
+<div class="hidden absolute left-1/2 -translate-x-1/2 bottom-28 z-50 px-4 py-2 rounded-full bg-[#333333]/90 text-white text-[13px] whitespace-nowrap" id="toast"></div>
+</div>
+<script>
+      var ACTIVE = 'movie';
+      var TAB_ON = 'tab relative py-2.5 text-[13px] font-bold text-[#333333]';
+      var TAB_OFF = 'tab relative py-2.5 text-[13px] text-[#999999]';
+
+      function pickTab(btn) {
+        var tabs = document.querySelectorAll('.tab');
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].className = TAB_OFF;
+          tabs[i].querySelector('.bar').classList.add('hidden');
+        }
+        btn.className = TAB_ON;
+        btn.querySelector('.bar').classList.remove('hidden');
+        ACTIVE = btn.getAttribute('data-tab');
+        var panes = document.querySelectorAll('.pane');
+        for (var j = 0; j < panes.length; j++) {
+          panes[j].style.display = panes[j].getAttribute('data-pane') === ACTIVE ? '' : 'none';
+        }
+        applyFilter();
+      }
+
+      function filterItems(selector, kw) {
+        var items = document.querySelectorAll(selector);
+        var shown = 0;
+        for (var i = 0; i < items.length; i++) {
+          var keys = ' ' + (items[i].getAttribute('data-keywords') || '') + ' ';
+          var ok = !kw || keys.indexOf(kw) > -1;
+          items[i].style.display = ok ? '' : 'none';
+          if (ok) {
+            shown++;
+          }
+        }
+        return shown;
+      }
+
+      function applyFilter() {
+        var raw = (document.getElementById('search-input').value || '').trim();
+        var kw = raw.toLowerCase();
+        var movieCount = filterItems('.movie-item', kw);
+        var peopleCount = filterItems('.person-item', kw);
+        var label = raw ? '「' + raw + '」' : '全部';
+        var countEl = document.getElementById('count-text');
+        var shown = 0;
+        if (ACTIVE === 'movie') {
+          countEl.textContent = '找到 ' + movieCount + ' 部与' + label + '相关的电影';
+          shown = movieCount;
+        } else if (ACTIVE === 'people') {
+          countEl.textContent = '找到 ' + peopleCount + ' 位与' + label + '相关的影人';
+          shown = peopleCount;
+        } else {
+          countEl.textContent = '科幻电影热榜 · 每日更新';
+          shown = document.querySelectorAll('.chart-item').length;
+        }
+        document.getElementById('empty').style.display = shown > 0 ? 'none' : '';
+        document.getElementById('nomore').style.display = shown > 0 ? '' : 'none';
+      }
+
+      function clearInput() {
+        var input = document.getElementById('search-input');
+        input.value = '';
+        input.focus();
+        applyFilter();
+      }
+
+      function runSearch() {
+        var raw = (document.getElementById('search-input').value || '').trim();
+        applyFilter();
+        toast(raw ? '已搜索「' + raw + '」' : '请输入关键词');
+      }
+
+      function toast(msg) {
+        var el = document.getElementById('toast');
+        el.textContent = msg;
+        el.classList.remove('hidden');
+        clearTimeout(window.__toastTimer);
+        window.__toastTimer = setTimeout(function () {
+          el.classList.add('hidden');
+        }, 1600);
+      }
+
+      applyFilter();
+    </script>
+</body>
+</html>
