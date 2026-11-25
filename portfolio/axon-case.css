@@ -1,0 +1,24 @@
+body {
+  --ink: #eee8f8;
+  --accent: #aa88ff;
+  --accent-ink: #5a397f;
+  background: #08070b;
+}
+
+.top, footer { border-color: #302b39; }
+.top .identity { font-family: Consolas, "Liberation Mono", monospace; letter-spacing: .05em; }
+.axon-mark { display: block; flex: 0 0 32px; }
+
+.case .case-top, .case.wear .case-top {
+  background: #15111c;
+  color: #f3edf9;
+}
+
+.case-top h1 em, .case.wear .case-top h1 em { color: #c7afff; }
+.case .case-top .case-lead, .case .case-top .back { color: #d1c7df; }
+.case .case-top .textlink { color: #f3edf9; }
+.case .case-top :focus-visible { outline-color: var(--accent); }
+.case .case-top .cta { background: #e8dcff; color: #241936; }
+.case .case-top .cta:hover, .case .case-top .cta:active { color: #241936; background: #d2b9ff; }
+.case-nav { background: #f0edf5; border-color: #d8d0e3; }
+.viewer-bar { background: #15111c; border-color: #41354e; }

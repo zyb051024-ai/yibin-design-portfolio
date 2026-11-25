@@ -1,98 +1,97 @@
 <!doctype html>
-<html lang="zh-CN" data-type="service">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#181918">
-  <meta name="page-type" content="service">
-  <meta name="site-kind" content="other">
-  <meta name="description" content="郑亦滨的工业设计与交互设计作品集，收录观影灵感 Movie Mood 与织序 WearFlow。">
-  <title>郑亦滨 · 交互设计作品集</title>
-  <script>
-    document.documentElement.classList.add('m-enter');
-    if (location.protocol !== 'file:') {
-      const moments = document.createElement('script');
-      moments.type = 'module';
-      moments.src = 'assets/moments/moments.js';
-      document.head.append(moments);
-    }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="郑亦滨的工业设计与交互设计作品集，收录《观影灵感》《织序》和 AXON 实时动效研究。">
+  <meta name="theme-color" content="#000000">
+  <title>郑亦滨 · 交互设计作品集 / AXON</title>
+  <link rel="icon" href="assets/axon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
-  <script src="film.js" defer></script>
+  <script defer src="assets/three.min.js"></script>
+  <script defer src="fluid.js"></script>
+  <script defer src="particles.js"></script>
+  <script defer src="interface.js"></script>
 </head>
-<body class="home">
-  <header class="top nav">
-    <a class="skip" href="#main">跳到正文</a>
-    <a class="identity" href="index.html"><i class="mark" aria-hidden="true"></i><strong>YIBIN ZHENG</strong></a>
-    <nav aria-label="网站导航"><a href="#work">精选作品</a><a href="#about">关于我</a></nav>
-  </header>
-  <main id="main" tabindex="-1">
-    <section class="hero" data-enter>
-      <div class="wrap">
-        <div class="hero-text">
-          <h1 lang="en"><span class="hero-title-line">Interaction</span>
-            <span class="hero-title-line"><em>Portfolio</em><b aria-hidden="true">.</b></span></h1>
-          <div class="hero-intro">
-            <p class="hero-lead">我关注设计如何让<strong>选择变得容易</strong>。</p>
-            <p>我是郑亦滨，工业设计专业交互方向的学生。这里收录了 2 个课程项目。</p>
-            <a class="cta" href="#work">浏览精选作品 <span class="arrow arrow-down" aria-hidden="true"></span></a>
-          </div>
-        </div>
-        <div class="sculpture" id="stage">
-          <div class="film-frame">
-            <canvas id="film" tabindex="0" role="img" aria-label="三维环形胶片，可拖动或使用方向键旋转视角"></canvas>
-          </div>
-          <div class="film-controls">
-            <p class="object-label"><span class="mini-ring" aria-hidden="true"></span> 拖动胶片</p>
-            <button id="rotate" type="button">转动视角</button>
-          </div>
-        </div>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <main class="ui" id="top">
+    <header class="brand luminous" lang="en">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <polygon fill="currentColor" points="20,8 22.1,14.9 28.5,11.5 25.1,17.9 32,20 25.1,22.1 28.5,28.5 22.1,25.1 20,32 17.9,25.1 11.5,28.5 14.9,22.1 8,20 14.9,17.9 11.5,11.5 17.9,14.9"/>
+      </svg>
+      <div><span class="wordmark">AXON</span><p>Yibin Zheng</p></div>
+    </header>
+    <nav class="view-nav" aria-label="站点导航">
+      <a href="#work" data-view="portfolio" aria-current="page">作品集</a>
+      <a href="#studies" data-view="studies">动效研究</a>
+    </nav>
+
+    <section class="portfolio" id="work" aria-label="郑亦滨的作品集">
+      <div class="portfolio-intro" id="about" tabindex="-1">
+        <h1>郑亦滨</h1>
+        <p class="portfolio-role">交互设计作品集</p>
+        <p>我是工业设计专业交互方向的学生。我关注人们如何选择，以及设计怎样让选择变得容易。</p>
       </div>
+      <section class="portfolio-work" aria-labelledby="projects-title">
+        <h2 id="projects-title">精选作品</h2>
+        <div class="portfolio-projects">
+          <a class="portfolio-card" href="portfolio/movie.html">
+            <div class="portfolio-cover movie-cover"><img src="portfolio/assets/movie-cover-hd.webp" width="2073" height="1137" alt=""></div>
+            <div class="portfolio-card-copy"><div><h3>观影灵感 <span lang="en">Movie Mood</span></h3><p>信息架构 / 交互原型</p></div><span class="portfolio-arrow" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="portfolio-card" href="portfolio/wear.html">
+            <div class="portfolio-cover wear-cover"><img src="portfolio/assets/icons.webp" alt=""></div>
+            <div class="portfolio-card-copy"><div><h3>织序 <span lang="en">WearFlow</span></h3><p>图标系统 / 界面应用</p></div><span class="portfolio-arrow" aria-hidden="true">↗</span></div>
+          </a>
+        </div>
+      </section>
     </section>
 
-    <section class="work" id="work">
-      <div class="wrap">
-        <h2>精选作品<span aria-hidden="true">.</span></h2>
-        <div class="projects">
-            <a class="project" href="movie.html">
-              <div class="cover movie-cover">
-                <div class="screens">
-                  <img src="assets/screen1.webp" width="1179" height="2556" decoding="async" loading="lazy" alt="观影灵感首页">
-                  <img src="assets/screen2.webp" width="1179" height="2556" decoding="async" loading="lazy" alt="按心情与同伴选片">
-                  <img src="assets/screen4.webp" width="1179" height="2556" decoding="async" loading="lazy" alt="电影详情页">
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>观影灵感 <em lang="en">Movie Mood</em></h3>
-                <p>今晚看什么？从心情和同伴出发，把找片、比较和观看串成一条选片路径。</p>
-                <p class="project-meta">信息架构 / 交互原型</p>
-                <span class="read">查看设计过程 <span class="arrow arrow-up-right" aria-hidden="true"></span></span>
-              </div>
-            </a>
-            <a class="project" href="wear.html">
-              <div class="cover wear-cover">
-                <img src="assets/icons.webp" decoding="async" loading="lazy" alt="织序的八枚衣橱功能图标">
-              </div>
-              <div class="project-info">
-                <h3>织序 <em lang="en">WearFlow</em></h3>
-                <p>从录入新衣到搭配和护理，用八枚图标区分衣橱里的常用操作。</p>
-                <p class="project-meta">图标系统 / 界面应用</p>
-                <span class="read">查看图标系统 <span class="arrow arrow-up-right" aria-hidden="true"></span></span>
-              </div>
-            </a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="closing about" id="about" data-moment="word-highlight">
-    <div class="wrap">
-      <div class="about-copy">
-        <h2>关于我<span aria-hidden="true">.</span></h2>
-        <p class="mo-wh__text"><span>从选片流程</span><span>到衣橱图标，</span><span>我关注人怎样读懂界面，</span><strong>决定下一步。</strong></p>
-        <a class="cta" href="#work">返回作品目录 <span class="arrow arrow-up" aria-hidden="true"></span></a>
-      </div>
-      <div class="footer-line"><span>郑亦滨 / YIBIN ZHENG</span><a href="#main">回到顶部 ↑</a></div>
+    <div id="studies" lang="en" hidden>
+    <div class="counter" aria-label="Index 07">07</div>
+
+    <div class="tags" role="group" aria-label="Filter studies">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="light" aria-pressed="false">Light</button>
+      <button type="button" data-filter="physics" aria-pressed="false">Physics</button>
+      <button type="button" data-filter="fluids" aria-pressed="false">Fluids</button>
+      <button type="button" data-filter="grid" aria-pressed="false">Grid</button>
+      <button type="button" data-filter="audio" aria-pressed="false">Audio</button>
+      <button type="button" data-filter="volumes" aria-pressed="false">Volumes</button>
+      <button type="button" data-filter="particles" aria-pressed="false">Particles</button>
+      <button type="button" data-filter="capture" aria-pressed="false">Capture</button>
+      <button type="button" data-filter="render" aria-pressed="false">Render</button>
     </div>
-  </footer>
+
+    <section class="list" tabindex="0" aria-label="Motion studies">
+      <article class="card" data-tags="light grid render">
+        <div class="thumb"><video src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/oraciteslArea.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Lattices / zone motion study"></video></div>
+        <div class="meta"><h2>Lattices<br>zone</h2><p>Ambient light<br>study</p></div>
+      </article>
+      <article class="card" data-tags="light physics volumes render">
+        <div class="thumb"><video src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/facet-glass-hero.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Prism / shell motion study"></video></div>
+        <div class="meta"><h2>Prism<br>shell</h2><p>Dispersion hero<br>render</p></div>
+      </article>
+      <article class="card" data-tags="fluids volumes particles render">
+        <div class="thumb"><video src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/stellarmind-hero.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Nebular / loop motion study"></video></div>
+        <div class="meta"><h2>Nebular<br>loop</h2><p>Procedural hero<br>sequence</p></div>
+      </article>
+      <article class="card" data-tags="capture">
+        <div class="thumb"><video src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/thedropthroughArea.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Fall / forward motion study"></video></div>
+        <div class="meta"><h2>Fall<br>forward</h2><p>Dolly track<br>study</p></div>
+      </article>
+      <p class="empty" role="status" hidden>No published studies for this tag.</p>
+    </section>
+
+    <aside class="about luminous" aria-label="About AXON">
+      <section><h2>[info]</h2><p>Studies are published as they are built and may not run on every device.</p></section>
+      <section><h2>[aims]</h2><p>An open logbook of real-time rendering research: surfaces, fluids, fields, and the little tools we build to shape them.</p><p>It is here to keep the work in view and to give each new project a place to grow.</p></section>
+      <section><h2>[exploring]</h2><ul><li>Signed surfaces</li><li>Cursor turbulence</li><li>Compute passes</li><li>Type in 3D space</li></ul></section>
+      <section><h2>[connect]</h2><a href="#work">Index -&gt; AXON</a><a href="mailto:hello@axonlab.dev">Mail -&gt; hello@axonlab.dev</a></section>
+    </aside>
+    </div>
+  </main>
 </body>
 </html>

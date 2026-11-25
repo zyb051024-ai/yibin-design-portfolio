@@ -1,0 +1,7 @@
+/movie /portfolio/movie 301
+/movie.html /portfolio/movie 301
+/wear /portfolio/wear 301
+/wear.html /portfolio/wear 301
+/movie-prototype /portfolio/movie-prototype 301
+/movie-prototype.html /portfolio/movie-prototype 301
+/prototype/* /portfolio/prototype/:splat 301
